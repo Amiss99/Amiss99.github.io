@@ -1,0 +1,179 @@
+/* Media Querry For Tablet Or Bigger Screen Devices */
+
+
+/* Navigation */
+
+#main-nav .social {
+   display: none;
+}
+
+
+/* #main-nav .social i {
+   margin: 0 5rem;
+} */
+
+
+#main-nav .container {
+   grid-template-columns: 1fr;
+   gap: 1.5rem;
+}
+
+
+#main-nav .logo,
+#main-nav ul {
+   justify-self: center;
+   align-items: center;
+}
+
+
+#main-nav ul li a {
+   padding: 0.6rem;
+}
+
+
+
+/* Home Articles */
+
+#home-articles .articles-container {
+   grid-template-columns: repeat(2, 1fr);
+}
+
+
+#home-articles .articles-container > *:first-child
+{
+   grid-template-columns: 1fr;
+   grid-column: 1;
+}
+
+
+#home-articles .articles-container > *:last-child {
+   grid-column: 1 / span 2;
+   background: #009cff;
+   /* background: var(--dark-color); */
+   /* color: #000; */
+   color: #fff;
+}  
+
+
+.bg-dark-p {
+   /* color: #009cff; */
+   color: darkred;   
+}
+
+
+
+/* Footer */
+
+#main-footer .footer-container {
+   grid-template-columns: repeat(2, 1fr);
+   gap: 0.5rem;
+}
+
+
+#main-footer .footer-container > * {
+   margin: 1rem 1.5rem;
+}
+
+
+#main-footer .footer-container > *:last-child {
+   grid-column: 1 / span 2;
+}
+
+
+
+
+
+/* Media Querry For Smart Phones */
+
+
+@media(max-width: 600px) 
+{
+
+   /* Stack Grid Items */
+
+   #showcase .showcase-container, 
+   #home-articles .articles-container,
+   #main-footer .footer-container
+   {
+      grid-template-columns: 1fr;
+   }
+
+
+   #main-footer .footer-container 
+   {
+      gap: 2.5rem;
+   }
+
+
+   #main-footer .footer-container > *:first-child,
+   #main-footer .footer-container > *:nth-child(2) 
+   {
+      border-bottom: #e4e4e4 solid 1px;
+      padding: 1rem 0;
+   }
+
+
+   #home-articles .articles-container > *:last-child 
+   {
+      grid-template-columns: 1fr;
+      grid-column: 1;
+   }
+
+
+   #main-footer .footer-container > *:last-child 
+   {
+      grid-column: 1;
+   }
+
+
+   #main-footer .footer-container input[type="email"] 
+   {
+      width: 100%;
+   }
+
+
+   #main-footer .footer-container .btn 
+   {
+      width: 100%;
+   }
+
+
+   .page-container 
+   {
+      grid-template-columns: 1fr;
+      text-align: center;
+   }
+
+
+   .page-container > *:first-child 
+   {
+      grid-row: 1;
+   }
+
+   #article .meta 
+   {
+      display: inline-block;
+      padding: 0.5rem 0;
+   }
+
+
+   .l-heading { font-size: 2rem;}
+
+   .m-heading { font-size: 1.5rem;}
+}
+
+
+
+
+
+/* Media Querry For Small Screen Smart Phones */
+
+
+@media(max-width: 370px) 
+{
+   #showcase .showcase-container 
+   {
+      height: 70vh;
+   }
+}
+
